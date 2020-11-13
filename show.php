@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM Gestbook');
+$res = mysqli_query($conn, 'SELECT * FROM Guestbook');
 ?>
 <table width="600" border="1">
   <tr>
@@ -19,7 +19,7 @@ $res = mysqli_query($conn, 'SELECT * FROM Gestbook');
     <th width="150"> <div align="center">Link </div></th>
   </tr>
 <?php
-while($Result = mysqli_fetch_array($res, MYSQL_ASSOC))
+while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
