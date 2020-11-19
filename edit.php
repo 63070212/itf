@@ -12,11 +12,11 @@ $comment = $_POST['comment'];
 
 $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name'";
 
-if (mysql_query($conn, $sql)) {
+if (mysqli_query($conn, $sql)) {
     echo "Edit successfully!";
   } else {
-    echo "Error: " . $sql . "<br>" . mysql_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-mysql_close($conn);
+mysqli_close($conn);
 ?>
