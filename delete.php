@@ -13,11 +13,11 @@ $comment = $_POST['comment'];
 $sql = $sql = "DELETE FROM guestbook WHERE name='$name'";
 $sql = $sql = "DELETE FROM guestbook WHERE Comment='$comment'";
 
-if (mysql_query($conn,$sql)) {
+if (mysqli_query($conn,$sql)) {
     echo "New record created successfully!";
   } else {
-    echo "Error: " . $sql . "<br>" . mysql_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-mysql_close($conn);
+mysqli_close($conn);
 ?>
