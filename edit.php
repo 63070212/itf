@@ -10,12 +10,12 @@ if (mysqli_connect_erron($conn))
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 
-$sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
+$sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name'";
 
-if (mysql_query($conn,$sql)) {
-    echo "New record created successfully!";
+if (mysql_query($conn, $sql)) {
+    echo "Edit successfully!";
   } else {
-    echo "Error: ".$sql."<br>".mysql_error($conn);
+    echo "Error: " . $sql . "<br>" . mysql_error($conn);
   }
 
 mysql_close($conn);
