@@ -28,18 +28,21 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <p class="ex1"><h1><center></center></h1></p>
     </div>
 <table width="600" border="1" class="table table-dark table-striped" class="center" class="ex1">
-  <tr class="info">
+  <thead>
+  <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
     <th width="150"> <div align="center">Action </div></th>
   </tr>
+   </thead>
+  </tbody>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><center><?php echo $Result['Name'];?></center></td>
-    <td><center><?php echo $Result['Comment'];?></center></td>
+    <td><?php echo $Result['Name'];?></div></td>
+    <td><?php echo $Result['Comment'];?></td>
     <td><center><a herf="form edit.html"><input type="submit" value="Edit" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE" class="btn btn-danger"></a></center></td>
   </tr>
 <?php
