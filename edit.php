@@ -13,7 +13,7 @@ $comment = $_POST['comment'];
 $sql = "UPDATE guestbook SET Comment='$comment' WHERE Name='$name' ";
 
 if (mysql_query($conn,$sql)) {
-    echo "New record created successfully! CONGRATULATION!";
+    echo "New record created successfully!";
   } else {
     echo "Error: ".$sql."<br>".mysql_error($conn)
   }
