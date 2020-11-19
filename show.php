@@ -40,15 +40,16 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><center><?php echo $Result['Name'];?></center></td>
     <td><center><?php echo $Result['Comment'];?></center></td>
-    <td><center><a herf="from edit.html"><input type="submit" value="Edit" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE" class="btn btn-danger"></a></center></td>
+    <td><center><a herf="form edit.html"><input type="submit" value="Edit" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE" class="btn btn-danger"></a></center></td>
   </tr>
 <?php
 }
 ?>
+  </tbody>
 </table>
-<center><a herf="form insert.html"><input type="submit" value="INSERT" class="btn btn-info"></a></center>
 <?php
 mysqli_close($conn);
 ?>
+<a target="_blank" href="https://chikage.azurewebsites.net/form.html" class="btn btn-outline-info">INSERT</a>
 </body>
 </html>
