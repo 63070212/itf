@@ -43,7 +43,7 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><center><a herf="form edit.html"><input type="submit" value="Edit" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE" class="btn btn-danger"></a></center></td>
+    <td><center><a herf="form edit.html"><input type="submit" value="Edit" class="btn btn-warning"></a>&nbsp;<a href="form delete.html"><input type="submit" value="DELETE" class="btn btn-danger"></a>&nbsp;</center></td>
   </tr>
 <?php
 }
